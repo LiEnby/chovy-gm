@@ -11,7 +11,7 @@ Also a nice gui was added
 chovy-gm release zip. includes a few other executables
 - at3tool it is an offical SONY tool for converting WAV into there properitary .at3 format. if anyone has a libary that can handle this please let me know.
 
-- umdgenc is the offical UMD ISO builder from sony, it was the only UMD ISO builder i could find that would acturally work properly on the PSVita, (makes sense since its the offical tool) the reason most dont work is that they align sectors in whatever way, the PSP doesnt care, but PSPEmu on the psvita does.
+- umdgenc is the offical UMD ISO builder from sony, it was the only UMD ISO builder i could find that would acturally work properly on the PSVita, (makes sense since its the offical tool) the reason most dont work is that they align sectors properly. the PSP doesnt care, but PSPEmu on the PSVita does, im working on my own UMD builder to replace this.
 
 - fluidsynth a MIDI synthesier, used for converting MID files inside the GM Executables into WAV and then into at3
 src: https://github.com/FluidSynth/fluidsynth
