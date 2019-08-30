@@ -1,0 +1,39 @@
+namespace GMAssetCompiler
+{
+	public enum eVM_InstructionBase
+	{
+		eVMB_Push,
+		eVMB_Pop,
+		eVMB_Dup,
+		eVMB_Conv,
+		eVMB_Mul,
+		eVMB_Div,
+		eVMB_Rem,
+		eVMB_Mod,
+		eVMB_Add,
+		eVMB_Sub,
+		eVMB_And,
+		eVMB_Or,
+		eVMB_Xor,
+		eVMB_Neg,
+		eVMB_Not,
+		eVMB_Shl,
+		eVMB_Shr,
+		eVMB_Set_lt,
+		eVMB_Set_le,
+		eVMB_Set_eq,
+		eVMB_Set_ne,
+		eVMB_Set_ge,
+		eVMB_Set_gt,
+		eVMB_Branch,
+		eVMB_Btrue,
+		eVMB_Bfalse,
+		eVMB_Call,
+		eVMB_Pushenv,
+		eVMB_Popenv,
+		eVMB_Ret,
+		eVMB_Exit,
+		eVMB_Popnull,
+		eVMB_LastOne
+	}
+}

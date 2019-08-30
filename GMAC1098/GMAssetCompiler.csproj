@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{9448EC1D-1983-4043-ACE5-94049A822CD7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <LangVersion>5</LangVersion>
+    <AssemblyName>SilicaAssetCompiler</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Core\3.5.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>C:\Users\Nik\AppData\Roaming\GameMaker-Studio\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Flobbster.Windows.Forms\PropertyBag.cs" />
+    <Compile Include="Flobbster.Windows.Forms\PropertySpec.cs" />
+    <Compile Include="Flobbster.Windows.Forms\PropertySpecEventArgs.cs" />
+    <Compile Include="Flobbster.Windows.Forms\PropertySpecEventHandler.cs" />
+    <Compile Include="Flobbster.Windows.Forms\PropertyTable.cs" />
+    <Compile Include="GMAssetCompiler.Machines\Android.cs" />
+    <Compile Include="GMAssetCompiler.Machines\HTML5.cs" />
+    <Compile Include="GMAssetCompiler.Machines\IOS.cs" />
+    <Compile Include="GMAssetCompiler.Machines\PSP.cs" />
+    <Compile Include="GMAssetCompiler.Machines\Symbian.cs" />
+    <Compile Include="GMAssetCompiler.Machines\Windows.cs" />
+    <Compile Include="GMAssetCompiler.Output\TextureOptionAttribute.cs" />
+    <Compile Include="GMAssetCompiler.Output\TextureOptions.cs" />
+    <Compile Include="GMAssetCompiler.Properties\Resources.cs" />
+    <Compile Include="GMAssetCompiler.Properties\Settings.cs" />
+    <Compile Include="GMAssetCompiler\DDS.cs" />
+    <Compile Include="GMAssetCompiler\DummyStream.cs" />
+    <Compile Include="GMAssetCompiler\eAction.cs" />
+    <Compile Include="GMAssetCompiler\eArgTypes.cs" />
+    <Compile Include="GMAssetCompiler\eErrorKind.cs" />
+    <Compile Include="GMAssetCompiler\eExecuteTypes.cs" />
+    <Compile Include="GMAssetCompiler\eGMLCodeType.cs" />
+    <Compile Include="GMAssetCompiler\eKind.cs" />
+    <Compile Include="GMAssetCompiler\eLex.cs" />
+    <Compile Include="GMAssetCompiler\eObject.cs" />
+    <Compile Include="GMAssetCompiler\eOutputType.cs" />
+    <Compile Include="GMAssetCompiler\eSquishCPU.cs" />
+    <Compile Include="GMAssetCompiler\eSquishFlags.cs" />
+    <Compile Include="GMAssetCompiler\eTexType.cs" />
+    <Compile Include="GMAssetCompiler\eToken.cs" />
+    <Compile Include="GMAssetCompiler\eType.cs" />
+    <Compile Include="GMAssetCompiler\eVM_ConditionCode.cs" />
+    <Compile Include="GMAssetCompiler\eVM_Instruction.cs" />
+    <Compile Include="GMAssetCompiler\eVM_InstructionBase.cs" />
+    <Compile Include="GMAssetCompiler\eVM_Type.cs" />
+    <Compile Include="GMAssetCompiler\ExtensionKind.cs" />
+    <Compile Include="GMAssetCompiler\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GMAssetCompiler\GMAction.cs" />
+    <Compile Include="GMAssetCompiler\GMAssets.cs" />
+    <Compile Include="GMAssetCompiler\GMBack.cs" />
+    <Compile Include="GMAssetCompiler\GMBackground.cs" />
+    <Compile Include="GMAssetCompiler\GMBitmap32.cs" />
+    <Compile Include="GMAssetCompiler\GMDataFile.cs" />
+    <Compile Include="GMAssetCompiler\GMEvent.cs" />
+    <Compile Include="GMAssetCompiler\GMExtension.cs" />
+    <Compile Include="GMAssetCompiler\GMExtensionConstant.cs" />
+    <Compile Include="GMAssetCompiler\GMExtensionFunction.cs" />
+    <Compile Include="GMAssetCompiler\GMExtensionInclude.cs" />
+    <Compile Include="GMAssetCompiler\GMFont.cs" />
+    <Compile Include="GMAssetCompiler\GMGlyph.cs" />
+    <Compile Include="GMAssetCompiler\GMHelp.cs" />
+    <Compile Include="GMAssetCompiler\GMInstance.cs" />
+    <Compile Include="GMAssetCompiler\GML2JavaScript.cs" />
+    <Compile Include="GMAssetCompiler\GML2VM.cs" />
+    <Compile Include="GMAssetCompiler\GMLCode.cs" />
+    <Compile Include="GMAssetCompiler\GMLCompile.cs" />
+    <Compile Include="GMAssetCompiler\GMLError.cs" />
+    <Compile Include="GMAssetCompiler\GMLFunction.cs" />
+    <Compile Include="GMAssetCompiler\GMLToken.cs" />
+    <Compile Include="GMAssetCompiler\GMLValue.cs" />
+    <Compile Include="GMAssetCompiler\GMLVariable.cs" />
+    <Compile Include="GMAssetCompiler\GMObject.cs" />
+    <Compile Include="GMAssetCompiler\GMOptions.cs" />
+    <Compile Include="GMAssetCompiler\GMPath.cs" />
+    <Compile Include="GMAssetCompiler\GMPathPoint.cs" />
+    <Compile Include="GMAssetCompiler\GMRoom.cs" />
+    <Compile Include="GMAssetCompiler\GMScript.cs" />
+    <Compile Include="GMAssetCompiler\GMSound.cs" />
+    <Compile Include="GMAssetCompiler\GMSprite.cs" />
+    <Compile Include="GMAssetCompiler\GMTile.cs" />
+    <Compile Include="GMAssetCompiler\GMTimeLine.cs" />
+    <Compile Include="GMAssetCompiler\GMTrigger.cs" />
+    <Compile Include="GMAssetCompiler\GMView.cs" />
+    <Compile Include="GMAssetCompiler\HTML5Saver.cs" />
+    <Compile Include="GMAssetCompiler\IFF.cs" />
+    <Compile Include="GMAssetCompiler\IFFChunkHandler.cs" />
+    <Compile Include="GMAssetCompiler\IFFChunkSaver.cs" />
+    <Compile Include="GMAssetCompiler\IFFChunkType.cs" />
+    <Compile Include="GMAssetCompiler\IFFPatchEntry.cs" />
+    <Compile Include="GMAssetCompiler\IFFSaver.cs" />
+    <Compile Include="GMAssetCompiler\IFFString.cs" />
+    <Compile Include="GMAssetCompiler\IIFFChunkHandler.cs" />
+    <Compile Include="GMAssetCompiler\IMachineType.cs" />
+    <Compile Include="GMAssetCompiler\IPropertyGrid.cs" />
+    <Compile Include="GMAssetCompiler\Lex.cs" />
+    <Compile Include="GMAssetCompiler\LexTree.cs" />
+    <Compile Include="GMAssetCompiler\Loader.cs" />
+    <Compile Include="GMAssetCompiler\Program.cs" />
+    <Compile Include="GMAssetCompiler\PropertyAttribute.cs" />
+    <Compile Include="GMAssetCompiler\Squish.cs" />
+    <Compile Include="GMAssetCompiler\StreamHelper.cs" />
+    <Compile Include="GMAssetCompiler\Texture.cs" />
+    <Compile Include="GMAssetCompiler\TexturePage.cs" />
+    <Compile Include="GMAssetCompiler\TexturePageEntry.cs" />
+    <Compile Include="GMAssetCompiler\Trace.cs" />
+    <Compile Include="GMAssetCompiler\VAG.cs" />
+    <Compile Include="GMAssetCompiler\VFNode.cs" />
+    <Compile Include="GMAssetCompiler\View.cs" />
+    <Compile Include="GMAssetCompiler\ViewBackground.cs" />
+    <Compile Include="GMAssetCompiler\ViewFont.cs" />
+    <Compile Include="GMAssetCompiler\ViewSprite.cs" />
+    <Compile Include="GMAssetCompiler\VMBuffer.cs" />
+    <Compile Include="GMAssetCompiler\VMLabel.cs" />
+    <Compile Include="GMAssetCompiler\Wave.cs" />
+    <Compile Include="GMAssetCompiler\YYArgEntry.cs" />
+    <Compile Include="GMAssetCompiler\YYArgName.cs" />
+    <Compile Include="GMAssetCompiler\YYArgType.cs" />
+    <Compile Include="GMAssetCompiler\YYArrayCountAttribute.cs" />
+    <Compile Include="GMAssetCompiler\YYBackground.cs" />
+    <Compile Include="GMAssetCompiler\YYEvent.cs" />
+    <Compile Include="GMAssetCompiler\YYFixedArrayCountAttribute.cs" />
+    <Compile Include="GMAssetCompiler\YYFont.cs" />
+    <Compile Include="GMAssetCompiler\YYGlyph.cs" />
+    <Compile Include="GMAssetCompiler\YYHeader.cs" />
+    <Compile Include="GMAssetCompiler\YYObfuscate.cs" />
+    <Compile Include="GMAssetCompiler\YYObject.cs" />
+    <Compile Include="GMAssetCompiler\YYObjectEntry.cs" />
+    <Compile Include="GMAssetCompiler\YYObjectEntryLevel2.cs" />
+    <Compile Include="GMAssetCompiler\YYOffsetToAttribute.cs" />
+    <Compile Include="GMAssetCompiler\YYOptionKVP.cs" />
+    <Compile Include="GMAssetCompiler\YYOptions.cs" />
+    <Compile Include="GMAssetCompiler\YYPath.cs" />
+    <Compile Include="GMAssetCompiler\YYPathPoint.cs" />
+    <Compile Include="GMAssetCompiler\yyRect.cs" />
+    <Compile Include="GMAssetCompiler\YYRoom.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomBackground.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomBackgrounds.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomInstance.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomInstances.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomOrderEntry.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomTile.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomTiles.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomView.cs" />
+    <Compile Include="GMAssetCompiler\YYRoomViews.cs" />
+    <Compile Include="GMAssetCompiler\YYScript.cs" />
+    <Compile Include="GMAssetCompiler\YYSound.cs" />
+    <Compile Include="GMAssetCompiler\YYSprite.cs" />
+    <Compile Include="GMAssetCompiler\YYStringOffsetAttribute.cs" />
+    <Compile Include="GMAssetCompiler\YYTimeline.cs" />
+    <Compile Include="GMAssetCompiler\YYTimelineEntry.cs" />
+    <Compile Include="GMAssetCompiler\YYTPageEntry.cs" />
+    <Compile Include="NDesk.Options\Option.cs" />
+    <Compile Include="NDesk.Options\OptionAction.cs" />
+    <Compile Include="NDesk.Options\OptionContext.cs" />
+    <Compile Include="NDesk.Options\OptionException.cs" />
+    <Compile Include="NDesk.Options\OptionSet.cs" />
+    <Compile Include="NDesk.Options\OptionValueCollection.cs" />
+    <Compile Include="NDesk.Options\OptionValueType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GMAssetCompiler\Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

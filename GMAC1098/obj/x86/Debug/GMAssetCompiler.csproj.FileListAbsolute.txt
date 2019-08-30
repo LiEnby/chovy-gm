@@ -1,0 +1,8 @@
+C:\Users\Nik\Documents\GMAC1098\obj\x86\Debug\GMAssetCompiler.csprojResolveAssemblyReference.cache
+C:\Users\Nik\Documents\GMAC1098\obj\x86\Debug\GMAssetCompiler.Form1.resources
+C:\Users\Nik\Documents\GMAC1098\obj\x86\Debug\GMAssetCompiler.csproj.GenerateResource.Cache
+C:\Users\Nik\Documents\GMAC1098\bin\Debug\GMAssetCompiler.exe
+C:\Users\Nik\Documents\GMAC1098\bin\Debug\GMAssetCompiler.pdb
+C:\Users\Nik\Documents\GMAC1098\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\Nik\Documents\GMAC1098\obj\x86\Debug\GMAssetCompiler.exe
+C:\Users\Nik\Documents\GMAC1098\obj\x86\Debug\GMAssetCompiler.pdb
