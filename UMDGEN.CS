@@ -107,13 +107,18 @@ namespace UmdGen
         public static void CreateISO(string UmiFile, string OutputDir)
         {
             Process UmdGen = new Process();
-            UmdGen.StartInfo.FileName = Path.Combine(Application.StartupPath, "umdgenc.exe");
+            //This would be too simple, sonys software is buggy af and doenst like being run 
+            //powershell -c ^&"C:\Users\earsy\Programs\chovy-gm\umdgenc.exe" /g "UmiFile.umi" "C:\Users\earsy\Desktop\Output"
+            //UmdGen.StartInfo.FileName = Path.Combine(Application.StartupPath, "umdgenc.exe");
+            //UmdGen.StartInfo.Arguments = "/g \"" + Path.GetFileName(UmiFile) + "\" \"" + OutputDir + "\"";
+            UmdGen.StartInfo.FileName = "powershell.exe";
+            UmdGen.StartInfo.Arguments = "-c & '" + Path.Combine(Application.StartupPath, "umdgenc.exe") + "' /g \"UmiFile.umi\" \"" + OutputDir + "\"";
             UmdGen.StartInfo.WorkingDirectory = Path.GetDirectoryName(UmiFile);
             UmdGen.StartInfo.CreateNoWindow = true;
             UmdGen.StartInfo.UseShellExecute = false;
             UmdGen.StartInfo.RedirectStandardOutput = true;
             UmdGen.StartInfo.RedirectStandardError = true;
-            UmdGen.StartInfo.Arguments = "/g \"" + Path.GetFileName(UmiFile) + "\" \"" + OutputDir + "\"";
+            
             Console.WriteLine(UmdGen.StartInfo.FileName + " " + UmdGen.StartInfo.Arguments);
             UmdGen.Start();
             UmdGen.WaitForExit();
