@@ -111,8 +111,8 @@ namespace UmdGen
             //powershell -c ^&"C:\Users\earsy\Programs\chovy-gm\umdgenc.exe" /g "UmiFile.umi" "C:\Users\earsy\Desktop\Output"
             //UmdGen.StartInfo.FileName = Path.Combine(Application.StartupPath, "umdgenc.exe");
             //UmdGen.StartInfo.Arguments = "/g \"" + Path.GetFileName(UmiFile) + "\" \"" + OutputDir + "\"";
-            UmdGen.StartInfo.FileName = "powershell.exe";
-            UmdGen.StartInfo.Arguments = "-c & '" + Path.Combine(Application.StartupPath, "umdgenc.exe") + "' /g \"UmiFile.umi\" \"" + OutputDir + "\"";
+            UmdGen.StartInfo.FileName = Path.Combine(Application.StartupPath, "umdgenc.exe");
+            UmdGen.StartInfo.Arguments = "/g \"UmiFile.umi\" \"" + OutputDir + "\"";
             UmdGen.StartInfo.WorkingDirectory = Path.GetDirectoryName(UmiFile);
             UmdGen.StartInfo.CreateNoWindow = true;
             UmdGen.StartInfo.UseShellExecute = false;
