@@ -6,6 +6,13 @@ Its Decompiled and Patched GameMaker Asset Compiler v1.0.98 (this was before the
 it has been modified to exclusively produce PSP compatible files from GM81 Executables. 
 Also a nice gui was added
 
+NOTE: this release is really buggy, and there isnt much i can do about it,
+this is mostly just using Karoshi (a PSP MINI put out by yoyogames back in 2011)  
+as the "runner" for the game and adapting a early GMStudio Compiler to build files for it
+
+the only bugs i can fix are ones relating to compilation, and not running the game itself.
+
+(ISOs built with this WILL work in Chovy-Sign.)
 
 # Dependancys
 chovy-gm release zip. includes a few other executables
@@ -17,3 +24,4 @@ chovy-gm release zip. includes a few other executables
 src: https://github.com/FluidSynth/fluidsynth
 
 - EBOOT.BIN same executable found in the PSP minis game "karoshi" it is effectively the gamemaker interpreter.
+
