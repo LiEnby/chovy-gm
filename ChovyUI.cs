@@ -42,6 +42,18 @@ namespace ChovyUI
 
                 SelectButton.Text = key.GetValue("SCE_CTRL_SELECT", SelectButton.Text.ToUpper()).ToString();
                 StartButton.Text =  key.GetValue("SCE_CTRL_START", StartButton.Text.ToUpper()).ToString();
+
+                string Runner = key.GetValue("RUNNER", "KAROSHI").ToString();
+                if(Runner == "GREENTECHPLUS")
+                {
+                    GreenTechPlus.Checked = true;
+                    Karoshi.Checked = false;
+                }
+                else
+                {
+                    GreenTechPlus.Checked = false;
+                    Karoshi.Checked = true;
+                }
                 key.Close();
             }
             catch (Exception) { };
@@ -76,7 +88,7 @@ namespace ChovyUI
         private void Browse_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "GameMaker 7/8/8.1 Executable files (*.exe)|*.exe;";
+            openFileDialog.Filter = "GameMaker 8/8.1 Executable files (*.exe)|*.exe;";
             openFileDialog.FilterIndex = 1;
             openFileDialog.RestoreDirectory = true;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -125,6 +137,17 @@ namespace ChovyUI
                 Directory.Delete(InputFolder, true);
             }
             CopyDirTree(Path.Combine(Application.StartupPath, "RUNNER"), InputFolder);
+
+            if(GreenTechPlus.Checked)
+            {
+                File.Delete(Path.Combine(InputFolder, "PSP_GAME", "SYSDIR", "KAROSHI.BIN"));
+                File.Move(Path.Combine(InputFolder, "PSP_GAME", "SYSDIR", "GREENTECHPLUS.BIN"), Path.Combine(InputFolder, "PSP_GAME", "SYSDIR", "EBOOT.BIN"));
+            }
+            else
+            {
+                File.Delete(Path.Combine(InputFolder, "PSP_GAME", "SYSDIR", "GREENTECHPLUS.BIN"));
+                File.Move(Path.Combine(InputFolder, "PSP_GAME", "SYSDIR", "KAROSHI.BIN"), Path.Combine(InputFolder, "PSP_GAME", "SYSDIR", "EBOOT.BIN"));
+            }
 
             //Write to PARAM.SFO:
             FileStream sfo = new FileStream(Path.Combine(InputFolder, "PSP_GAME", "PARAM.SFO"),FileMode.OpenOrCreate,FileAccess.ReadWrite);
@@ -308,6 +331,15 @@ namespace ChovyUI
 
                 key.SetValue("SCE_CTRL_SELECT", SelectButton.Text.ToUpper());
                 key.SetValue("SCE_CTRL_START", StartButton.Text.ToUpper());
+
+                if(GreenTechPlus.Checked)
+                {
+                    key.SetValue("RUNNER", "GREENTECHPLUS");
+                }
+                else
+                {
+                    key.SetValue("RUNNER", "KAROSHI");
+                }
                 key.Close();
             }
             catch (Exception)

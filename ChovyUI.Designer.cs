@@ -69,6 +69,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Karoshi = new System.Windows.Forms.RadioButton();
+            this.label19 = new System.Windows.Forms.Label();
+            this.GreenTechPlus = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -132,7 +135,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.LBumper);
             this.groupBox1.ForeColor = System.Drawing.Color.Cyan;
-            this.groupBox1.Location = new System.Drawing.Point(194, 197);
+            this.groupBox1.Location = new System.Drawing.Point(190, 215);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(356, 252);
             this.groupBox1.TabIndex = 3;
@@ -409,7 +412,7 @@
             // 
             this.BuildISO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuildISO.ForeColor = System.Drawing.Color.Lime;
-            this.BuildISO.Location = new System.Drawing.Point(190, 455);
+            this.BuildISO.Location = new System.Drawing.Point(190, 473);
             this.BuildISO.Name = "BuildISO";
             this.BuildISO.Size = new System.Drawing.Size(356, 23);
             this.BuildISO.TabIndex = 7;
@@ -535,20 +538,57 @@
             // 
             this.pictureBox1.BackgroundImage = global::ChovyUI.Properties.Resources.psmkun;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 473);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 488);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // Karoshi
+            // 
+            this.Karoshi.AutoSize = true;
+            this.Karoshi.ForeColor = System.Drawing.Color.Lime;
+            this.Karoshi.Location = new System.Drawing.Point(407, 192);
+            this.Karoshi.Name = "Karoshi";
+            this.Karoshi.Size = new System.Drawing.Size(60, 17);
+            this.Karoshi.TabIndex = 19;
+            this.Karoshi.TabStop = true;
+            this.Karoshi.Text = "Karoshi";
+            this.Karoshi.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Lime;
+            this.label19.Location = new System.Drawing.Point(332, 194);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 13);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "PSP Runner:";
+            // 
+            // GreenTechPlus
+            // 
+            this.GreenTechPlus.AutoSize = true;
+            this.GreenTechPlus.ForeColor = System.Drawing.Color.Lime;
+            this.GreenTechPlus.Location = new System.Drawing.Point(467, 192);
+            this.GreenTechPlus.Name = "GreenTechPlus";
+            this.GreenTechPlus.Size = new System.Drawing.Size(85, 17);
+            this.GreenTechPlus.TabIndex = 21;
+            this.GreenTechPlus.TabStop = true;
+            this.GreenTechPlus.Text = "GreenTech+";
+            this.GreenTechPlus.UseVisualStyleBackColor = true;
             // 
             // ChovyUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(569, 494);
+            this.ClientSize = new System.Drawing.Size(564, 504);
+            this.Controls.Add(this.GreenTechPlus);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Title);
+            this.Controls.Add(this.Karoshi);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.TitleId);
             this.Controls.Add(this.label17);
@@ -620,5 +660,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox Title;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton Karoshi;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.RadioButton GreenTechPlus;
     }
 }
