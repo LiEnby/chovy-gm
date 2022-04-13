@@ -8,7 +8,9 @@ Also a nice gui was added
 
 NOTE: this release is really buggy, and there isnt much i can do about it,
 this is mostly just using Karoshi (a PSP MINI put out by yoyogames back in 2011)  
-as the "runner" for the game and adapting a early GMStudio Compiler to build files for it
+as the "runner" for the game and adapting a early GMStudio Compiler to build files for it              
+The "runner" was NEVER released publicly as an GM export module! and is basically was always in beta,                 
+before being abandoned in favour of the PSVita version. dont expect stuff to work *well*           
 
 the only bugs i can fix are ones relating to compilation, and not running the game itself.
 
