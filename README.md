@@ -1,4 +1,7 @@
 # chovy-gm
+
+Development moved to: https://silica.codes/SilicaAndPina/chovy-gm
+
 At long last. GameMaker 8.1 to PSP!
 
 What is this code?
